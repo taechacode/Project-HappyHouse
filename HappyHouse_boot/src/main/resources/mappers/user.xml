@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssafy.happyhouse.model.mapper.UserMapper">
+
+	<!-- 회원의 수 확인(아이디 중복 체크 등) -->
+	<select id="findUser" parameterType="string" resultType="int">
+	select count(*)
+	from user
+	where id=#{id}
+	</select>
+
+	<!-- 회원 가입 -->
+	<insert id="doSignUp" parameterType="UserDto">
+	insert into user(id, name, password, email, phone, area, level)
+	values (#{id}, #{name}, #{password}, #{email}, #{phone}, #{area}, #{level})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="doLogin" parameterType="map" resultType="UserDto">
+	select id, name, email, phone, level
+	from user
+	where id=#{id} and password=#{password}
+	</select>
+	
+	<!-- 전체 회원 정보 가져오기 -->
+	<select id="allUserInfo" resultType="UserDto">
+	select id, password, name, email, phone, area, level
+	from user
+	</select>
+	
+	<!-- 회원 정보 1개 가져오기 -->
+	<select id="userInfo" parameterType="string" resultType="UserDto">
+	select id, password, name, email, phone, area, level
+	from user
+	where id=#{id}
+	</select>
+	
+	<!-- 회원 정보 수정 -->
+	<update id="userUpdate" parameterType="UserDto">
+	update user
+	set password=#{password}, name=#{name}, email=#{email}, phone=#{phone}, area=#{area}, level=#{level}
+	where id=#{id}
+	</update>
+	
+	<!-- 회원 정보 삭제 -->
+	<delete id="userDelete" parameterType="string">
+	delete from user
+	where id=#{id}
+	</delete>
+	
+	<select id = "getRefreshToken" parameterType = "String" resultType = "String">
+		select token
+		from user
+		where id = #{id}
+	</select>
+	
+	<update id="saveRefreshToken" parameterType = "Map">
+		update user
+		set token = #{token}
+		where id = #{id}
+	</update>
+	
+	<update id="deleteRefreshToken" parameterType = "Map">
+		update user
+		set token = #{token, jdbcType=VARCHAR}
+		where id = #{id}
+	</update>
+	
+</mapper>	

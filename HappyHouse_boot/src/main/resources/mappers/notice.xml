@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.model.mapper.NoticeMapper">
+
+	<!-- 게시글 리스트 가져오기 -->
+	<select id="getList" resultType="NoticeDto">
+	select no, title, content, hit, regdate, id
+	from notice
+	</select>
+	
+	<!-- 게시글  1개 가져오기-->
+	<select id="getArticle" parameterType="int" resultType="NoticeDto">
+	select no, title, content, hit, regdate, id
+	from notice
+	where no=#{no}
+	</select>
+	
+	<!-- 게시글 작성 -->
+	<insert id="doWrite" parameterType="NoticeDto">
+	insert into notice(title, content, id)
+	values(#{title}, #{content}, #{id})
+	</insert>
+	
+	<!-- 게시글 수정 -->
+	<update id="doUpdate" parameterType="NoticeDto">
+	update notice
+	set title=#{title}, content=#{content}
+	where no=#{no}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="doDelete" parameterType="int">
+	delete from notice
+	where no=#{no}
+	</delete>
+	
+	<!-- 조회수 증가 -->
+	<update id="doHit" parameterType="int">
+	update notice
+	set hit = IFNULL(hit, 0) + 1
+	where no=#{no}
+	</update>
+	
+	<!-- 게시글 목록 조회 -->
+	<select id="listNotice" parameterType="map" resultType="NoticeDto">
+		select no, title, content, hit, regdate, id
+		from notice
+		order by no desc
+		limit #{start}, #{spp}
+	</select>
+
+	<!-- 게시글 전체 개수 조회 -->
+	<select id="listNoticeTotalCount" resultType="int">
+		select count(*) from notice
+	</select>
+</mapper>
+
