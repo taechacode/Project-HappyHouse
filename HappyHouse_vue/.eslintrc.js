@@ -1,33 +1,3 @@
-module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
-  extends: [
-    "plugin:vue/essential",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-  ],
-  parserOptions: {
-    parser: "@babel/eslint-parser",
-  },
-  rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "prettier/prettier": [
-      "error",
-      {
-        singleQuote: false,
-        semi: true,
-        tabWidth: 2,
-        trailingComma: "all",
-        printWidth: 80,
-        bracketSpacing: true,
-        arrowParens: "always",
-        endOfLine: "auto",
-        useTabs: false,
-      },
-    ],
-    "vue/multi-word-component-names": ["error", { ignores: [] }],
-  },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:9812d41af0e486f2748f920060d026be4dd62fb92e67aee9eb8865ed37a9c1ed
+size 765

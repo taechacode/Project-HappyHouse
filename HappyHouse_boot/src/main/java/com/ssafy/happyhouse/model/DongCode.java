@@ -1,11 +1,3 @@
-package com.ssafy.happyhouse.model;
-
-import lombok.Data;
-
-@Data
-public class DongCode {
-	private String dongCode;
-	private String sidoName;
-	private String gugunName;
-	private String dongName;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ef55562b11e796a38f4ea38455203dd6d88a699c1c0d331c86255c58d32f626
+size 206

@@ -1,18 +1,3 @@
-package com.ssafy.happyhouse.model.mapper;
-
-import java.util.List;
-
-
-import com.ssafy.happyhouse.model.NoticeDto;
-import com.ssafy.happyhouse.model.NoticeParameterDto;
-
-public interface NoticeMapper {
-	List<NoticeDto> getList();
-	NoticeDto getArticle(int no);
-	int doWrite(NoticeDto boardDto);
-	int doUpdate(NoticeDto boardDto);
-	int doDelete(int no);
-	int doHit(int no);
-	List<NoticeDto> listNotice(NoticeParameterDto noticeParameterDto);
-	int listNoticeTotalCount();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08431ffe763bc51a776162f8c268ce15f2bebe123d0e9273b0c48fa90429b058
+size 489

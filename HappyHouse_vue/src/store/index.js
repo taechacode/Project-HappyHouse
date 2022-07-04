@@ -1,27 +1,3 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import createPersistedState from "vuex-persistedstate";
-
-Vue.use(Vuex);
-
-import userStore from "@/store/modules/userStore";
-import noticeStore from "@/store/modules/noticeStore";
-import aptStore from "@/store/modules/aptStore";
-import newsStore from "./modules/newsStore";
-
-const store = new Vuex.Store({
-  modules: {
-    userStore,
-    noticeStore,
-    aptStore,
-    newsStore,
-  },
-  plugins: [
-    createPersistedState({
-      // 브라우저 종료시 제거하기 위해 localStorage가 아닌 sessionStorage로 변경. (default: localStorage)
-      storage: sessionStorage,
-    }),
-  ],
-});
-
-export default store;
+version https://git-lfs.github.com/spec/v1
+oid sha256:c74ea7cb491ad8c914b36a533973cf13c4d1ea08a28993f678c4de5365df2989
+size 668

@@ -1,16 +1,3 @@
-package com.ssafy.happyhouse.model.mapper;
-
-import java.util.List;
-import java.util.Map;
-
-import com.ssafy.happyhouse.model.AptDto;
-import com.ssafy.happyhouse.model.DongCode;
-
-public interface AptMapper {
-	List<String> getSido();
-	List<String> getGugun(String sido);
-	List<DongCode> getDong(Map<String, String> map);
-	List<AptDto> getAptList(Map<String, Object> map);
-	int getAptCount(Map<String, Object> map);
-	DongCode getArea(String dong);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a57319b0444dce4e38e43a9121c23a7bf40e06ebc237ff486ae006ccb091f54
+size 462

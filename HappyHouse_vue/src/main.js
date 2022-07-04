@@ -1,27 +1,3 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-
-// Import Bootstrap and BootstrapVue CSS files (order is important)
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-// Modal
-import VModal from "vue-js-modal";
-
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin);
-// Modal
-Vue.use(VModal, { dynamic: true });
-
-Vue.config.productionTip = false;
-
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+version https://git-lfs.github.com/spec/v1
+oid sha256:51881fb7a7e971d1695fcecd63231289a0ec9e2671ca8a200e235a91ece84d10
+size 692

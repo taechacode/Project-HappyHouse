@@ -1,31 +1,3 @@
-<template>
-  <b-tr>
-    <b-td>{{ id }}</b-td>
-    <b-td>{{ name }} </b-td>
-    <b-td>{{ email }}</b-td>
-    <b-td>{{ phone }}</b-td>
-    <b-td>{{ level }}</b-td>
-    <b-td
-      ><router-link :to="{ name: 'manage', params: { id: id } }">
-        수정</router-link
-      ></b-td
-    >
-  </b-tr>
-</template>
-
-<script>
-export default {
-  name: "MemberListItem",
-  props: {
-    id: String,
-    name: String,
-    email: String,
-    phone: String,
-    area: String,
-    level: String,
-  },
-  filters: {},
-};
-</script>
-
-<style></style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1c594d7d0fbb772b501673785772e32d1c19259c3e5ab2d3545e81ea31e14f0
+size 562

@@ -1,12 +1,3 @@
-package com.ssafy.happyhouse.model.service;
-
-import java.util.List;
-
-import com.ssafy.happyhouse.model.NewsDto;
-import com.ssafy.happyhouse.model.NewsParameterDto;
-
-public interface NewsService {
-	NewsDto getNews(int no);
-	List<NewsDto> listNews(NewsParameterDto newsParameterDto);
-	int listNewsTotalCount();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ab5dbb9640a62980fa2dd525b50e66ec96d730094af40da3e3c23dccd1d5432
+size 323

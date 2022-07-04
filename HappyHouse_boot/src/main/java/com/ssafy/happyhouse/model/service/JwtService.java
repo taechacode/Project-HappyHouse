@@ -1,12 +1,3 @@
-package com.ssafy.happyhouse.model.service;
-
-import java.util.Map;
-
-public interface JwtService {
-	<T> String createAccessToken(String key, T data);
-	<T> String createRefreshToken(String key, T data);
-	<T> String create(String key, T data, String subject, long expir);
-	Map<String, Object> get(String key);
-	String getId();
-	boolean checkToken(String jwt);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b019a8a822f3d5f4affc446f43c1c3d64cc420639ee3ab1b5ab22dd4408dd0b6
+size 371

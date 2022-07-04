@@ -1,4 +1,3 @@
-const SERVER_URL = "http://localhost:8081/happyhouse";
-const MAP_KEY = "71a47a3e98cd228498fe7ae589f13d18";
-
-export { SERVER_URL, MAP_KEY };
+version https://git-lfs.github.com/spec/v1
+oid sha256:41b37f6d07d8416d9a5607341aebf129125ce807c1b366165ce0de90fa1ff905
+size 144

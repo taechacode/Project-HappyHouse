@@ -1,25 +1,3 @@
-<template>
-  <b-container class="bv-example-row mt-3">
-    <b-row>
-      <b-col>
-        <b-alert variant="secondary" show
-          ><h3>{{ this.$route.params.id }}님의 회원 정보</h3></b-alert
-        >
-      </b-col>
-    </b-row>
-    <member-input-item type="manage" />
-  </b-container>
-</template>
-
-<script>
-import MemberInputItem from "@/components/user/item/MemberInputItem.vue";
-
-export default {
-  name: "MemberManage",
-  components: {
-    MemberInputItem,
-  },
-};
-</script>
-
-<style></style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:34c8f4f0c82c1854921e55a3642323fd9fc8161a10b1eb59db6f7677c5bcfebf
+size 530

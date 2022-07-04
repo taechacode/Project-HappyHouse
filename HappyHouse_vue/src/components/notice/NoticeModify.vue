@@ -1,24 +1,3 @@
-<template>
-  <b-container class="bv-example-row mt-3">
-    <b-row>
-      <b-col>
-        <b-alert show><h3>글수정</h3></b-alert>
-      </b-col>
-    </b-row>
-    <notice-input-item type="modify" />
-  </b-container>
-</template>
-
-<script>
-import NoticeInputItem from "@/components/notice/item/NoticeInputItem.vue";
-
-export default {
-  name: "NoticeModify",
-  components: {
-    /* eslint-disable vue/no-unused-components */
-    NoticeInputItem,
-  },
-};
-</script>
-
-<style></style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f1f8cad78a9f9871707bbe61b01985043ac5474dedcb91b2fd5410e32a51e67
+size 479

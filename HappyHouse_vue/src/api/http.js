@@ -1,10 +1,3 @@
-import axios from "axios";
-import { SERVER_URL } from "@/config";
-
-// axios 객체 생성
-export default axios.create({
-  baseURL: SERVER_URL,
-  headers: {
-    "Content-type": "application/json",
-  },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:faa538c78f078432bbaa4263648d840aedf3ec0f2dd1c4df58c2122bc9adc026
+size 215
